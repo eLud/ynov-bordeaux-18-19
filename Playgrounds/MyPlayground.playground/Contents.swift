@@ -1,3 +1,4 @@
+import UIKit
 
 var name = "Ludovic"
 name = "Paul"
@@ -31,6 +32,95 @@ default:
     print("It's too hot.")
 }
 
+func triple(value: Int) {
+    let result = value * 3
+    print(result)
+}
 
+triple(value: 10)
 
+func multiply(_ firstNumber: Int, by secondNumber: Int) -> Int {
+    let result = firstNumber * secondNumber
+    return result
+}
 
+let resultat = multiply(2, by: 5)
+
+var test = "etst"
+
+let color = UIColor(red: 0.2, green: 0.1, blue: 0.5, alpha: 1)
+let color2 = UIColor(hue: 0.2, saturation: 0.5, brightness: 0.3, alpha: 1)
+
+struct Car {
+    let make: String
+    let year: Int
+    let color: String
+
+    func drive() {
+        print("\(make) drives")
+    }
+}
+
+let myCar = Car(make: "Honda", year: 2010, color: "Blue")
+let myCar2 = Car(make: "Honda", year: 2011, color: "Blue")
+myCar.drive()
+myCar.year
+
+struct Temperature {
+
+    static let boilingTemp = Temperature(celsius: 100)
+    static let freezingTemp = Temperature(celsius: 0)
+
+    //Stored property
+    var celsius: Double
+
+    //Get only computed property
+    var fahrenheit: Double {
+        return celsius * 1.8 + 32
+    }
+
+    //Get Set computed property
+    var kelvin : Double {
+        get {
+            return celsius + 273.15
+        }
+
+        set {
+            celsius = newValue - 273.15
+        }
+    }
+
+    init(celsius: Double) {
+        self.celsius = celsius
+    }
+
+    init(fahrenheit: Double) {
+        celsius = (fahrenheit - 32) / 1.8
+    }
+
+    init(kelvin: Double) {
+        celsius = kelvin - 273.15
+    }
+
+}
+let currentTemp = Temperature(celsius: 7)
+
+let fahrenheitValue = 98.6
+let celsiusValue = (fahrenheitValue - 32) / 1.8
+let alertTemp = Temperature(celsius: celsiusValue)
+
+var boiling = Temperature(celsius: 100)
+boiling.fahrenheit
+boiling.celsius = 90
+boiling.kelvin = 0
+boiling.celsius
+
+let boiling2 = Temperature.freezingTemp
+
+var temp2 = boiling
+temp2
+
+boiling.kelvin = 66
+boiling
+
+temp2
