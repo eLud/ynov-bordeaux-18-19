@@ -124,3 +124,65 @@ boiling.kelvin = 66
 boiling
 
 temp2
+
+
+
+
+
+
+
+
+
+var names = ["Amy", "Brad", "Chelsea", "Dan", "Ludovic"]
+var names2 = ["Amy", "Brad", "Chelsea", "Dan"]
+
+var common = [String]()
+for name in names {
+    for otherName in names2 {
+        if name == otherName {
+            common.append(otherName)
+        }
+    }
+}
+
+let nameSet = Set(names)
+let name2Set = Set(names2)
+nameSet.subtracting(name2Set)
+
+let chelsea = names.remove(at:2)
+let dan = names.removeLast()
+names.removeFirst()
+names.removeAll()
+names.randomElement()
+print(names)
+
+struct Toddler {
+    var birthName: String
+    var monthsOld: Int
+
+    init?(birthName: String, monthsOld: Int) {
+        if monthsOld < 12 || monthsOld > 36 {
+            return nil
+        } else {
+            self.birthName = birthName
+            self.monthsOld = monthsOld
+        }
+    }
+}
+
+if var toddler = Toddler(birthName: "Test", monthsOld: 40) {
+    toddler.monthsOld = 41
+}
+
+let x = Int("12")
+let y = Int("24")
+
+if let firstNumber = x, let secondNumber = y, secondNumber + firstNumber > 0 {
+        print(firstNumber + secondNumber)
+}
+
+if let uppercasedFirst = names2.first?.uppercased() {
+
+} else {
+    print("Tableau vide")
+}
