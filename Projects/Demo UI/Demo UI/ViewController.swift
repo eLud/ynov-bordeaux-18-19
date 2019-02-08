@@ -24,5 +24,16 @@ class ViewController: UIViewController {
         firstLabel.text = "Hello"
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "showCalculator" {
+            guard let destination = segue.destination as? CalculatorViewController else {
+                fatalError("Expected CalculatorViewController")
+            }
+            destination.title = "Calculator"
+            destination.screenColor = .blue
+        }
+    }
+
 }
 

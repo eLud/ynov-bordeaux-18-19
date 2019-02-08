@@ -186,3 +186,54 @@ if let uppercasedFirst = names2.first?.uppercased() {
 } else {
     print("Tableau vide")
 }
+
+func printFirst(array: [String]) {
+
+    guard let firstElement = array.first else { return }
+    guard firstElement != "Toto" else { return }
+
+    print(firstElement)
+}
+
+class Dog: CustomStringConvertible, Codable {
+
+    var description: String {
+        return "Dog(nom: \"\(name)\", age: \(age)"
+    }
+
+    var name: String
+    var age: Int
+
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+let medor = Dog(name: "Médor", age: 2)
+print(medor)
+
+struct Employee: Equatable, Codable {
+    let firstName: String
+    let lastName: String
+    let jobTitle: String
+    let phoneNumber: String
+
+    static func ==(lhs: Employee, rhs: Employee) -> Bool {
+        return lhs.firstName == rhs.firstName && lhs.lastName == rhs.lastName
+    }
+}
+
+struct Company: Codable {
+    let name: String
+    let employees: [Employee]
+}
+
+let company = Company(name: "Apple", employees: [])
+
+let selectedEmployee = Employee(firstName: "Jacob", lastName: "Edwards",                                  jobTitle: "Marketing Director", phoneNumber: "415-555-9293")
+let emp2 = Employee(firstName: "Jacob", lastName: "Edwards",                                  jobTitle: "Director", phoneNumber: "415-555-9293")
+
+if selectedEmployee == emp2 {
+ print("Equal")
+}

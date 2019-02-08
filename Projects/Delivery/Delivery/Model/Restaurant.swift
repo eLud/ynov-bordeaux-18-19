@@ -12,11 +12,15 @@ class Restaurant {
 
     let name: String
     let address: String
-    var menu: [MenuItem]
+    private var menu: [MenuItem]
 
     init(name: String, address: String, menu: [MenuItem] = []) {
         self.name = name
         self.address = address
         self.menu = menu
+    }
+
+    func add(item: MenuItem) {
+        menu.append(item)
     }
 }
