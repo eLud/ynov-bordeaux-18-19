@@ -33,11 +33,13 @@ class DemoTableViewController: UIViewController, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "subCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "bigEmoji", for: indexPath) as? BigEmojiTableViewCell else { fatalError("Wrong cell type") }
 
         let currentEmoji = emojis[indexPath.row]
-        cell.textLabel?.text = currentEmoji.symbol
-        cell.detailTextLabel?.text = currentEmoji.name
+        cell.configure(with: currentEmoji.symbol)
+        
+//        cell.textLabel?.text = currentEmoji.symbol
+//        cell.detailTextLabel?.text = currentEmoji.name
 
         return cell
     }

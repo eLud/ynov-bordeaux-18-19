@@ -14,6 +14,7 @@
 		339222B6220316E60006BBED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339222B4220316E60006BBED /* LaunchScreen.storyboard */; };
 		33922304220C8CE40006BBED /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33922303220C8CE40006BBED /* CalculatorViewController.swift */; };
 		339ED94B220DC3EF00E915A3 /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339ED94A220DC3EF00E915A3 /* DemoTableViewController.swift */; };
+		33AF66FD2227D470009780BD /* BigEmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF66FC2227D470009780BD /* BigEmojiTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		339222B7220316E60006BBED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33922303220C8CE40006BBED /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		339ED94A220DC3EF00E915A3 /* DemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
+		33AF66FC2227D470009780BD /* BigEmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigEmojiTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		339222AA220316E40006BBED /* Demo UI */ = {
 			isa = PBXGroup;
 			children = (
+				33AF66FC2227D470009780BD /* BigEmojiTableViewCell.swift */,
 				339222AB220316E40006BBED /* AppDelegate.swift */,
 				339222AD220316E40006BBED /* ViewController.swift */,
 				33922303220C8CE40006BBED /* CalculatorViewController.swift */,
@@ -145,6 +148,7 @@
 				339222AE220316E40006BBED /* ViewController.swift in Sources */,
 				33922304220C8CE40006BBED /* CalculatorViewController.swift in Sources */,
 				339222AC220316E40006BBED /* AppDelegate.swift in Sources */,
+				33AF66FD2227D470009780BD /* BigEmojiTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
