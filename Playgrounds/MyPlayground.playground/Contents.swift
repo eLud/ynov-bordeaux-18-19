@@ -229,11 +229,52 @@ struct Company: Codable {
     let employees: [Employee]
 }
 
-let company = Company(name: "Apple", employees: [])
-
 let selectedEmployee = Employee(firstName: "Jacob", lastName: "Edwards",                                  jobTitle: "Marketing Director", phoneNumber: "415-555-9293")
 let emp2 = Employee(firstName: "Jacob", lastName: "Edwards",                                  jobTitle: "Director", phoneNumber: "415-555-9293")
+
+let company = Company(name: "Apple", employees: [selectedEmployee, emp2])
 
 if selectedEmployee == emp2 {
  print("Equal")
 }
+
+let jsonEncoder = JSONEncoder()
+let plistEncoder = PropertyListEncoder()
+
+do {
+    let dataJSON = try jsonEncoder.encode(company)
+    let str = String(data: dataJSON, encoding: .utf8)
+    print(str!)
+
+
+    let jsonDecoder = JSONDecoder()
+    let comp = try jsonDecoder.decode(Company.self, from: dataJSON)
+    print(comp.employees.first)
+
+} catch {
+    print(error)
+}
+
+//if let dataPLIST = try? plistEncoder.encode(company) {
+//    print(dataPLIST)
+//}
+
+
+func compare(name1: String, name2: String) -> Bool {
+    return name1.count < name2.count
+}
+
+compare(name1: "AAAAA", name2: "AA")
+
+let compareClosure = { (name1: String, name2: String) -> Bool in
+    return name1.count < name2.count
+}
+
+compareClosure("aa","aaaaaaa")
+//
+names2.sorted(by: compareClosure)
+
+
+//names2.sorted { (<#String#>, <#String#>) -> Bool in
+//    <#code#>
+//}

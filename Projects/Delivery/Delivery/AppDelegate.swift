@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let filemanager = FileManager.default
+        let urls = filemanager.urls(for: .documentDirectory, in: .userDomainMask)
+        if let documentURL = urls.first {
+            print(documentURL)
+
+            let archiveURL = documentURL.appendingPathComponent("savedData").appendingPathExtension("json")
+            print(archiveURL)
+        }
         return true
     }
 

@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let champagne = MenuItem.init(name: "Champagne", price: 80, presentation: "A boire", itemType: .drink)
         
         var resto = Restaurant(name: "Nom", address: "")
-        resto.menu = [champagne]
+        resto.add(item: champagne)
     }
 
 }
