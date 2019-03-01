@@ -10,11 +10,26 @@ import Foundation
 
 struct MenuItem {
 
-    enum MenuItemType {
+    // Int défini la rawValue, le type de donnée qui est représenté par l'enum
+    // CaseIterable permet d'utiliser une propriété allCases pour récupérer tous les cas possible d'une enum
+    enum MenuItemType: Int, CaseIterable {
         case main
         case appetizer
         case desert
         case drink
+
+        var title: String {
+            switch self {
+            case .main:
+                return "Main"
+            case .appetizer:
+                return "Appetizer"
+            case .desert:
+                return "Desert"
+            case .drink:
+                return "Drink"
+            }
+        }
     }
 
     let name: String

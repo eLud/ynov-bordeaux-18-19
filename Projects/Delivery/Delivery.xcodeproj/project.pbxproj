@@ -14,7 +14,6 @@
 		339222FA22049CFD0006BBED /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339222F922049CFD0006BBED /* Restaurant.swift */; };
 		339222FC22049DAF0006BBED /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339222FB22049DAF0006BBED /* MenuItem.swift */; };
 		339222FE2204A0980006BBED /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339222FD2204A0980006BBED /* Order.swift */; };
-		339223022204A17F0006BBED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339223012204A17F0006BBED /* ViewController.swift */; };
 		33A5B1F92229215C00923C67 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A5B1F82229215C00923C67 /* MenuTableViewController.swift */; };
 		33A5B1FB2229216600923C67 /* BasketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A5B1FA2229216600923C67 /* BasketTableViewController.swift */; };
 		33A5B1FD2229217400923C67 /* FormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A5B1FC2229217400923C67 /* FormTableViewController.swift */; };
@@ -31,7 +30,6 @@
 		339222F922049CFD0006BBED /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		339222FB22049DAF0006BBED /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		339222FD2204A0980006BBED /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		339223012204A17F0006BBED /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33A5B1F82229215C00923C67 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		33A5B1FA2229216600923C67 /* BasketTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewController.swift; sourceTree = "<group>"; };
 		33A5B1FC2229217400923C67 /* FormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 		339223002204A17F0006BBED /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				339223012204A17F0006BBED /* ViewController.swift */,
 				33A5B1F82229215C00923C67 /* MenuTableViewController.swift */,
 				33A5B1FA2229216600923C67 /* BasketTableViewController.swift */,
 				33A5B1FC2229217400923C67 /* FormTableViewController.swift */,
@@ -172,7 +169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				339223022204A17F0006BBED /* ViewController.swift in Sources */,
 				339222FC22049DAF0006BBED /* MenuItem.swift in Sources */,
 				33A5B1F92229215C00923C67 /* MenuTableViewController.swift in Sources */,
 				33A5B1FD2229217400923C67 /* FormTableViewController.swift in Sources */,
